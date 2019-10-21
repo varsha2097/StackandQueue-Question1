@@ -1,8 +1,9 @@
 #include<stdint.h>
-#include "stack.h"
+#include "stkqq.h"
 #include<assert.h>
 #include<stddef.h>
 #include<stdlib.h>
+
 
 Stack stack_new(int32_t size)
 {
@@ -28,7 +29,7 @@ Stack* stack_push(Stack *stk,char element,Stack_Result * res)
 	assert(stk!=NULL);
 	if(stk->top+1<stk->size)
 	{
-
+		//stk->top++;
 		stk->data[++stk->top]=element;
 
 		res->data=element;
@@ -48,7 +49,7 @@ Stack* stack_pop(Stack *stk,Stack_Result *res)
 	{
 		res->data= stk->data[stk->top];
 		res->status = STACK_OK;
-		stk->top--;
+		--stk->top;
 	}
 	else
 	{
@@ -73,6 +74,3 @@ else
 	return stk;
 
 }
-
-
-

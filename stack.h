@@ -15,7 +15,7 @@ typedef struct _stackResult_ Stack_Result;
 struct _stack_
 {
 	char data[MAX_DEPTH];
-
+	//int32_t data[MAX_DEPTH];
 	int32_t top;
 	int32_t size;
 
@@ -25,7 +25,7 @@ struct _stackResult_
 {
 	char data;
 
-
+	//int32_t data;
 	int32_t status;
 };
 
